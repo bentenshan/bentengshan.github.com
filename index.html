@@ -16,7 +16,12 @@
     <div class="wrapper">
       <header>
         <h3>水满汀洲，何处寻芳草</h3>
-        
+        {% for post in site.posts %}
+
+<li>{{ post.date date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">
+{{ post.title }}</a></li>
+
+{% endfor %}
       </header>
       <section>
         <h3>Welcome to GitHub Pages.</h3>
@@ -72,20 +77,6 @@ $ git checkout gh-pages
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-
-
-
-
-
-
-
-
-{% for post in site.posts %}
-
-<li>{{ post.date date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">
-{{ post.title }}</a></li>
-
-{% endfor %}
 
         <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
